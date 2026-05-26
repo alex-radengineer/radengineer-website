@@ -491,7 +491,7 @@ a { color: inherit; text-decoration: none; }
   left: 50%;
   width: 0.18em;
   height: 0.18em;
-  border-radius: 0.02em;
+  border-radius: 50%;
   background: currentColor;
   transform: translateX(-50%);
   transition: background var(--transition);

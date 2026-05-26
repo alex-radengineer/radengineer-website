@@ -220,12 +220,17 @@ period simultaneously turns off-white). To enable this, the "i" is
 actually a Turkish dotless ı (U+0131) wrapped in `<span class="ci">`,
 and the dot is drawn via a `::after` pseudo-element so its color can
 be controlled independently. The pseudo is tuned to match Plex Sans's
-natural i-dot shape (`width/height: 0.18em`, `border-radius: 0.02em`,
-`top: 0.16em`). If the font ever changes, re-tune those values.
+natural i-dot shape — round, not square. If the font ever changes,
+re-tune the values noted at the bottom of this section.
 
 For accessibility, the anchor carries `aria-label="info@radengineer.com"`
 and every visible span has `aria-hidden="true"` so screen readers
 announce the proper email instead of "ınfo".
+
+Dot specs (tuned to match Plex Sans's natural i-dot):
+`width/height: 0.18em`, `border-radius: 50%` (circular, matching the
+natural i-dots which are round, not square), `top: 0.16em`. Re-tune
+if the font ever changes.
 
 ---
 
