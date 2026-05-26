@@ -212,6 +212,21 @@ When using it, place a single cyan dot at a meaningful boundary
 (sentence end, domain separator). Never multiple per phrase. Never on
 non-punctuation glyphs.
 
+### Email hover — the "dot jump"
+
+The contact email has a hover state where the cyan accent moves from
+the domain period to the dot above the "i" in "info" (the domain
+period simultaneously turns off-white). To enable this, the "i" is
+actually a Turkish dotless ı (U+0131) wrapped in `<span class="ci">`,
+and the dot is drawn via a `::after` pseudo-element so its color can
+be controlled independently. The pseudo is tuned to match Plex Sans's
+natural i-dot shape (`width/height: 0.18em`, `border-radius: 0.02em`,
+`top: 0.16em`). If the font ever changes, re-tune those values.
+
+For accessibility, the anchor carries `aria-label="info@radengineer.com"`
+and every visible span has `aria-hidden="true"` so screen readers
+announce the proper email instead of "ınfo".
+
 ---
 
 ## 7. Interaction conventions
