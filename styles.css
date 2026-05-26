@@ -36,7 +36,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--c-bg);
+  background-color: var(--c-bg);
+  background-image:
+    linear-gradient(to right, rgba(43, 61, 81, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(43, 61, 81, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
   color: var(--c-ink);
   font-family: var(--ff-sans);
   font-size: 17px;
@@ -131,7 +135,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   overflow: hidden;
   padding: clamp(72px, 14vh, 140px) 0 clamp(80px, 14vh, 140px);
-  background: var(--c-bg);
+  background: transparent;
 }
 
 /* engineering grid background */
